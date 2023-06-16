@@ -1,1 +1,19 @@
-test
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: rainbowdarkness-server-deployment
+  namespace: production
+  labels:
+    app: rainbowdarkness-server-app
+spec:
+  replicas: 0
+  template:
+    metadata:
+      labels:
+        apps: rainbowdarkness-server
+      spec:
+        containers:
+        - name: rainbowdarkness-server
+          image: cayabyabrr/rainbowdarkness-server:latest
+          ports:
+          - containerPort: 8081

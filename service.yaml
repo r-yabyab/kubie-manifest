@@ -1,1 +1,11 @@
-test
+apiVersion: v1
+kind: Service
+metadata:
+  #name: rainbowdarkness-server
+  namespace: production
+spec:
+  ports:
+  - name: 8081
+  type: LoadBalancer
+  selector:
+    apps: rainbowdarkness-server
