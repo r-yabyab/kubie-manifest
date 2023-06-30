@@ -1,24 +1,24 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: rainbowdarkness-server-deployment
-  labels:
-    app: rainbowdarkness-server
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: rainbowdarkness-server
-  template:
-    metadata:
-      labels:
-        app: rainbowdarkness-server
-    spec:
-      containers:
-        - name: rainbowdarkness-server
-          image: cayabyabrr/rainbowdarkness-server:latest
-          ports:
-            - containerPort: 32001
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: rainbowdarkness-server-deployment
+#  labels:
+#    app: rainbowdarkness-server
+#spec:
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      app: rainbowdarkness-server
+#  template:
+#    metadata:
+#      labels:
+#        app: rainbowdarkness-server
+#    spec:
+#      containers:
+#        - name: rainbowdarkness-server
+#          image: cayabyabrr/rainbowdarkness-server:latest
+#          ports:
+#            - containerPort: 32001
 
 
 #Run this bottom part to run both api and service
