@@ -5,41 +5,17 @@ metadata:
   labels:
     app: rainbowdarkness-server
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: rainbowdarkness-server
   template:
     metadata:
       labels:
-        apps: rainbowdarkness-server
+        app: rainbowdarkness-server
     spec:
       containers:
         - name: rainbowdarkness-server
           image: cayabyabrr/rainbowdarkness-server:latest
           ports:
-            - containerPort: 8081
-
-
-
-
-
-# apiVersion: apps/v1beta1
-# kind: Deployment
-# metadata:
-#   name: rainbowdarkness-server-deployment
-#   namespace: production
-#   labels:
-#     app: rainbowdarkness-server-app
-# spec:
-#   replicas: 1
-#   template:
-#     metadata:
-#       labels:
-#         apps: rainbowdarkness-server
-#       spec:
-#         containers:
-#         - name: rainbowdarkness-server
-#           image: cayabyabrr/rainbowdarkness-server:latest
-#           ports:
-#           - containerPort: 8081
+            - containerPort: 32001
